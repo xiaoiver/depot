@@ -14,6 +14,10 @@
  *= require_tree .
  */
  
+ /*
+ *= require jquery.ui.all
+ */
+ 
 /* START_HIGHLIGHT */
 #banner {
   background: #9c9;
@@ -41,7 +45,7 @@
   background: #141;
 
   #main {
-    margin-left: 17em;
+    margin-left: 33em;
     padding: 1em;
     background: white;
   }
@@ -49,7 +53,7 @@
   #side {
     float: left;
     padding: 1em 2em;
-    width: 13em;
+    width: 28em;
     background: #141;
 
     ul {
@@ -66,3 +70,19 @@
   }
 }
 /* END_HIGHLIGHT */
+
+/* Styles for the cart in the sidebar */
+#cart, #cart table {
+	font-size: smaller;
+	color: white;
+}
+#cart table {
+	border-top: 1px dotted #595;
+	border-bottom: 1px dotted #595;
+	margin-bottom: 10px;
+}
+
+.locale {
+	float: right;
+	margin: -0.25em 0.1em;
+}

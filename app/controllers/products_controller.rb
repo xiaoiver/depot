@@ -79,5 +79,12 @@ class ProductsController < ApplicationController
       format.html { redirect_to products_url }
       format.json { head :no_content }
     end
-  end
+end
+
+	def who_bought
+		@product = Product.find(params[:id])
+		respond_to do |format|
+			format.atom
+		end
+	end
 end

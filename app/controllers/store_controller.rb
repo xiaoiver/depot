@@ -1,6 +1,13 @@
 class StoreController < ApplicationController
-  def index
-	increment_counter
-	@products = Product.all
-  end
+	skip_before_filter :authorize
+	
+	def index
+		if params[:set_locale]
+			redirect_to store_path(:locale => params[:set_locale])
+		else
+			increment_counter
+			@products = Product.all
+			@cart = current_cart
+		end
+	end
 end
